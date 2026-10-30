@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:Karago;Moustapha;;;
+FN;CHARSET=UTF-8:Moustapha Karago
+ORG:Stela
+TITLE;CHARSET=UTF-8:Commercial
+TEL;TYPE=CELL,VOICE:+33636131746
+EMAIL;TYPE=INTERNET,WORK:moustapha@mystela.fr
+URL:https://www.mystela.fr
+END:VCARD

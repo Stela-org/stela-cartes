@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:Volet;Mélissa;;;
+FN;CHARSET=UTF-8:Mélissa Volet
+ORG:Stela
+TITLE;CHARSET=UTF-8:Commercial
+TEL;TYPE=CELL,VOICE:+33612389722
+EMAIL;TYPE=INTERNET,WORK:melissa@mystela.fr
+URL:https://www.mystela.fr
+END:VCARD
