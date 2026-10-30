@@ -45,11 +45,6 @@ h1{font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
 .val{color:var(--lime);word-break:break-all}
 .cta{display:block;margin-top:24px;background:var(--lime);color:var(--bg);text-align:center;font-weight:700;padding:15px;border-radius:14px}
 .cta:active{opacity:.8}
-.list .row{display:flex;align-items:center;gap:12px;padding:10px 16px}
-.list .row+.row::before{left:72px}
-.mini{width:44px;height:44px;font-size:17px;margin:0;flex:none}
-.list .name{flex:1;font-weight:700}
-.chev{color:var(--sub);font-size:22px}
 """
 
 
@@ -147,18 +142,6 @@ def contact_page(c):
     return page(f"{name} · {ORG}", body, f"Fiche contact de {name}, {ORG}", "../")
 
 
-def team_page():
-    rows = "".join(
-        f'<a class="row" href="{c["slug"]}/"><div class="avatar mini" aria-hidden="true">{initials(c)}</div>'
-        f'<span class="name">{esc(full_name(c))}</span><span class="chev">›</span></a>'
-        for c in DATA["contacts"]
-    )
-    body = f"""<div class="head" style="margin-bottom:24px"><h1>Notre équipe</h1><div class="org">Touchez un nom pour enregistrer le contact</div></div>
-<div class="group list">{rows}</div>
-<a class="cta" href="{esc(SITE)}" target="_blank" rel="noopener">Visiter {esc(site_label())}</a>"""
-    return page(f"Équipe · {ORG}", body, f"Contacts de l'équipe {ORG}", "")
-
-
 def main():
     (ROOT / "qr").mkdir(exist_ok=True)
     (ROOT / ".nojekyll").write_text("")
@@ -170,8 +153,7 @@ def main():
         q = segno.make(f'{BASE}/{c["slug"]}/', error="m")
         q.save(ROOT / "qr" / f'{c["slug"]}.svg', scale=10, border=4)
         q.save(ROOT / "qr" / f'{c["slug"]}.png', scale=24, border=4)
-    (ROOT / "index.html").write_text(team_page(), encoding="utf-8")
-    print(f"OK : {len(DATA['contacts'])} fiches + page équipe + QR codes générés.")
+    print(f"OK : {len(DATA['contacts'])} fiches + QR codes générés.")
 
 
 if __name__ == "__main__":
