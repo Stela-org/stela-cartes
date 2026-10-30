@@ -2,7 +2,7 @@
 
 Fiches contact à la charte Stela, une par personne, accessibles par QR code ou NFC.
 
-- Fiches : `https://avistar-info.github.io/stela-cartes/<prenom>/`
+- Fiches : `https://stela-org.github.io/stela-cartes/<prenom>/`
 - QR codes prêts à imprimer : dossier `qr/` (PNG haute définition + SVG)
 
 ## NFC

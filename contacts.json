@@ -1,7 +1,7 @@
 {
   "entreprise": "Stela",
   "site": "https://www.mystela.fr",
-  "base_url": "https://avistar-info.github.io/stela-cartes",
+  "base_url": "https://stela-org.github.io/stela-cartes",
   "contacts": [
     { "slug": "moustapha", "prenom": "Moustapha", "nom": "Karago", "poste": "Commercial", "tel": "+33636131746", "email": "moustapha@mystela.fr" },
     { "slug": "melissa",   "prenom": "Mélissa",   "nom": "Volet",  "poste": "Commercial", "tel": "+33612389722", "email": "melissa@mystela.fr" }
